@@ -1,0 +1,551 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Nunito;
+    
+}
+
+.w3-bar-item w3-button
+{
+    font-weight: bold;
+
+}
+
+.w3-bar .w3-button 
+{
+  padding: 16px;
+
+font-weight: bold;
+font-size: 20px;
+
+
+}
+ 
+.logo-image
+{
+width: 80px;
+    
+height: 60px;
+    
+border-radius: 20%;
+    
+margin-top: -20px;
+    
+margin-left: -25px;
+
+}
+/*
+header
+{
+
+}
+#left-nav
+{
+    float: left;
+    
+}
+#right-nav
+{
+    float: right;
+    list-style-type: none;
+}
+#right-nav li
+{
+    margin-top: 25px;
+    margin: 10px;
+    display: inline-block;
+}*/
+/*ul li
+{
+    
+}
+#right-nav li a
+{
+    background-color: #fff;
+    color: darkcyan;
+    margin-top: 25px;
+    text-decoration: none;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    
+    transition: 0.4s ;
+}
+#right-nav li a:hover
+{
+    background-color: darkcyan;
+    color: #fff;
+   
+}*/
+
+body
+{
+    font-family: 'Nunito', sans-serif;
+    background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) ,url(parkimg.jpg) ;
+    background-size: cover;
+    background-position: fixed;
+    
+    
+    margin: 0;
+    padding: 0;
+
+    
+
+}
+
+h1
+{
+	font-weight: bold;
+	margin-left: 30px;
+	color: white;
+}
+
+h4
+{
+	font-size: 20px;
+	color: white;
+}
+
+h3
+{
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.search-box1
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: -20px;
+    margin-left: -600px;
+    
+        
+
+}
+.search-box1:hover .search-txt1
+{
+    width: 150px;
+    padding:0;
+    text-align: left;
+    color: black;
+    visibility: visible;
+    font-size: 20px;
+    
+}
+.search-box1:hover .search-btn1
+{
+    visibility: visible;
+    
+}
+
+.search-box1:hover .button1
+{
+    visibility: visible;
+    margin-left: 40px;
+    font-size: 22px;
+
+
+    
+}
+
+
+.search-btn1
+{
+    color: darkcyan;
+    float: right;
+    width: 35px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.4s;
+    margin-left: -6px;
+    
+
+}
+.search-txt1
+{
+    visibility: hidden;
+    border: none;
+    background: white;
+    outline: none;
+    float: left;
+    padding: 0 0 0 10px;
+    transition: 0.4s;
+    font-size: 0px;
+    text-align: center;
+    line-height: 20px;
+    width: 0px;
+}
+.button1
+{
+    visibility: hidden;
+     border: none;
+    background: white;
+    outline: none;
+    float: left;
+    
+    color: black;
+    
+    width: 40px;
+    height: 20px;
+    
+    
+}
+
+.search-box2
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: -20px;
+    margin-left: -200px;
+    
+        
+
+}
+.search-box2:hover .search-txt2
+{
+    width: 150px;
+    padding:0;
+    text-align: left;
+    color: black;
+    visibility: visible;
+    font-size: 20px;
+    
+}
+.search-box2:hover .search-btn2
+{
+    visibility: visible;
+    
+}
+
+.search-box2:hover .button2
+{
+    visibility: visible;
+    margin-left: 40px;
+    font-size: 22px;
+
+
+    
+}
+
+
+.search-btn2
+{
+    color: darkcyan;
+    float: right;
+    width: 35px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.4s;
+    margin-left: -6px;
+    
+
+}
+.search-txt2
+{
+    visibility: hidden;
+    border: none;
+    background: white;
+    outline: none;
+    float: left;
+    padding: 0 0 0 6px;
+    transition: 0.4s;
+    font-size: 0px;
+    
+    line-height: 20px;
+    width: 0px;
+}
+.button2
+{
+    visibility: hidden;
+     border: none;
+    background: white;
+    outline: none;
+    float: left;
+    
+    color: black;
+    
+    width: 40px;
+    height: 20px;
+    
+    
+}
+
+
+.search-box3
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: -20px;
+    margin-left: 200px;
+    
+        
+
+}
+.search-box3:hover .search-txt3
+{
+    width: 150px;
+    padding:0;
+    text-align: left;
+    color: black;
+    visibility: visible;
+    font-size: 20px;
+    
+}
+.search-box3:hover .search-btn3
+{
+    visibility: visible;
+    
+}
+
+.search-box3:hover .button3
+{
+    visibility: visible;
+    margin-left: 40px;
+    font-size: 22px;
+
+
+    
+}
+
+
+.search-btn3
+{
+    color: darkcyan;
+    float: right;
+    width: 35px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.4s;
+    margin-left: -6px;
+    
+
+}
+.search-txt3
+{
+    visibility: hidden;
+    border: none;
+    background: white;
+    outline: none;
+    float: left;
+    padding: 0 0 0 6px;
+    transition: 0.4s;
+    font-size: 0px;
+    
+    line-height: 20px;
+    width: 0px;
+}
+.button3
+{
+    visibility: hidden;
+     border: none;
+    background: white;
+    outline: none;
+    float: left;
+    
+    color: black;
+    
+    width: 40px;
+    height: 20px;
+    
+    
+}
+
+
+.search-box4
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: -20px;
+    margin-left: 600px;
+    
+        
+
+}
+.search-box4:hover .search-txt4
+{
+    width: 150px;
+    padding:0;
+    text-align: left;
+    color: black;
+    visibility: visible;
+    font-size: 20px;
+    
+}
+.search-box4:hover .search-btn4
+{
+    visibility: visible;
+    
+}
+
+.search-box4:hover .button4
+{
+    visibility: visible;
+    margin-left: 40px;
+    font-size: 22px;
+
+
+    
+}
+
+
+.search-btn4
+{
+    color: darkcyan;
+    float: right;
+    width: 35px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.4s;
+    margin-left: -6px;
+    
+
+}
+.search-txt4
+{
+    visibility: hidden;
+    border: none;
+    background: white;
+    outline: none;
+    float: left;
+    padding: 0 0 0 6px;
+    transition: 0.4s;
+    font-size: 0px;
+    
+    line-height: 20px;
+    width: 0px;
+}
+.button4
+{
+    visibility: hidden;
+     border: none;
+    background: white;
+    outline: none;
+    float: left;
+    
+    color: black;
+    
+    width: 40px;
+    height: 20px;
+    
+    
+}
+
+.first
+{
+    margin-left: 265px;
+    margin-top: 330px;
+    color: white ;
+}
+.second
+{
+    margin-left: 647px;
+    margin-top: -180px;
+    color: white ;
+}
+.third
+{
+    margin-left: 982px;
+    margin-top: -175px;
+    color: white ;
+}
+.fourth
+{
+    margin-left: 1415px;
+    margin-top: -175px;
+    color: white ;
+}
+
+
+
+
+
+#sbranch
+{
+    margin-top: 83px;
+    margin-left: 264.5px;
+}
+#svehicle
+{
+    margin-top: 82px;
+    margin-left: 670px;
+
+}
+#Ivehicle
+{
+    margin-top: 81px;
+    margin-left: 1067px;
+
+}
+#Servehicle
+{
+    margin-top: 83px;
+    margin-left: 1470px;
+
+}
+
+select {
+  
+  /*border: none;*/
+  font-family: 'Nunito', sans-serif;
+  /*font-size: 15px;*/
+  height: 30%;
+  margin: 0;
+  outline: 0;
+  padding: 7px;
+  width: 10%;
+  background-color: #e8eeef;
+  color: black;
+
+  border-radius: 15px;
+  /*box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;*/
+  
+}
+  
+#svd
+{
+	color: white;
+}

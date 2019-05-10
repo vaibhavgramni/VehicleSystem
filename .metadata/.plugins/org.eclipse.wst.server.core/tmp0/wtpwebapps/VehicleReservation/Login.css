@@ -1,0 +1,163 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	background-image: url("parkimg.jpg");
+	background-position: center;
+    /*margin-left: 15px;*/
+    margin-top: 30px;
+	background-size:cover;
+ 	font-family: 'Nunito', sans-serif;
+  	color: #384047;
+}
+
+a {
+    color: #000;
+}
+
+form {
+    margin-top: 1px;
+  margin-left: 50px;
+  max-width: 400px;
+  margin: 1px auto;
+  padding: 10px 20px;
+  color: black;
+  background-color: #fff;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0 0 0 0;
+  text-align: center;
+}
+
+.w3-bar-item w3-button
+{
+    font-weight: bold;
+
+}
+
+.w3-bar .w3-button 
+{
+  padding: 16px;
+
+font-weight: bold;
+font-size: 20px;
+
+
+}
+ 
+.logo-image
+{
+width: 80px;
+    
+height: 60px;
+    
+border-radius: 20%;
+    
+margin-top: -20px;
+    
+margin-left: -25px;
+
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 12px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  border-radius: 15px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 2px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+button {
+  margin: auto;
+  padding: 15px 33px 15px 33px;
+  color: #FFF;
+  font-family: 'Nunito', sans-serif;
+  background-color: darkcyan;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-style: normal;
+  border-radius: 25px;
+  width: 40%;
+  border: 2px solid;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -3px 0 inherit;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+label {
+  text-align: left;
+  display: block;
+  font-size: 12px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+/*#4bc970
+  #5fcf80  
+  #3ac162 */
+.number { 
+  background-color: darkcyan;
+  color: #fff;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.7em;
+  margin-right: 4px;
+  line-height: 22px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 500px) {
+
+  form {
+    max-width: 500px;
+  }
+
+}

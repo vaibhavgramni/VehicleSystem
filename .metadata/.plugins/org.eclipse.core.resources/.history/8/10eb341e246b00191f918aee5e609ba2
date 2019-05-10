@@ -1,0 +1,87 @@
+
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="VehicleR.*"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+Connection con=null;
+PreparedStatement pstmt=null;
+ResultSet rs=null;
+String vehicletype=(String)request.getParameter("vehicletype");
+String role = (String)session.getAttribute("role");
+%>
+		<table align="center" cellpadding="5" cellspacing="5" border="1">
+			<tr>
+			
+			</tr>
+			<tr>
+				<td><b>Vehicle No</b></td>
+				<td><b>Branch</b></td>
+				<td><b>Vehicle Type</b></td>
+				<td><b>Insurance Date</b></td>
+				<td><b>Last Service Date</b></td>
+				<td><b>Service Due Date</b></td>
+				</tr>
+				<%
+				try {
+		               con=Util1.getConnection();
+		               System.out.println("before stmt");
+		               System.out.println(vehicletype);
+		               pstmt=con.prepareStatement("select * from vehicleinfo1 where vehicletype='"+vehicletype+"'");
+		               System.out.println("after stmt");
+		               rs=pstmt.executeQuery();
+		               System.out.println("Inside try search page");
+		               while(rs.next())
+		               {
+		            	   System.out.println("inside while next");
+		            	   if(role.equals("admin"))
+		            	   {
+		            		   %>
+		            		   	<tr>
+					<td><a href="" id="vehicleno"><%=rs.getString("vehicleno") %></a></td>
+					<td><%=rs.getString("branch") %></td>
+					<td><%=rs.getString("vehicletype") %></td>
+					<td><%=rs.getString("insurancedate") %></td>
+					<td><%=rs.getString("lastservicedate") %></td>
+					<td><%=rs.getString("serviceduedate") %></td>
+					
+				</tr>
+						<% 
+		            	   }
+		            	   else
+		            	   {
+		            		  %>
+		            		  <tr>
+					<td><%=rs.getString("vehicleno") %></td>
+					<td><%=rs.getString("branch") %></td>
+					<td><%=rs.getString("vehicletype") %></td>
+					<td><%=rs.getString("insurancedate") %></td>
+					<td><%=rs.getString("lastservicedate") %></td>
+					<td><%=rs.getString("serviceduedate") %></td>
+					
+				</tr>
+				<%  
+		            	   }
+				
+				
+		               }
+		             } 
+		             catch (SQLException e) {       
+		                      e.printStackTrace();
+		               }
+		               finally {
+		                      Util1.closeAll(rs, pstmt, con);
+		               }
+				%>
+		</table>
+</body>
+</html>

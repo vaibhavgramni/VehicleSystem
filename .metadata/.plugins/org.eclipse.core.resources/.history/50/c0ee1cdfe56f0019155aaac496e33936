@@ -1,0 +1,138 @@
+<html>
+
+<title>ABOUT US</title>
+
+<link rel="icon" href="Capture5.PNG" type="image/gif" sizes="70x70">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+
+<body>
+	
+		
+<p><h1 class="k">
+  About Us
+</h1>
+  <h2 class="l">
+
+The Vehicle Reservation system demonstrates how you can build advanced business solutions.
+The system allows users to submit vehicle reservation, including the ability to specify additional tasks.An all-inclusive vehicle rental management tool is necessary for seamless operations of an enterprise rental company. 
+This System provides a Centralized inventory management to alert expiry of vehicle insurance, adherence towards scheduled maintenance & notification towards ageing vehicles. <h2>
+		</p>
+</body>
+<style>
+
+
+body, 
+html 
+{
+  height: 100%;
+  overflow:hidden;
+  
+line-height: 1.8;
+background-image: url("https://images.pexels.com/photos/1020320/pexels-photo-1020320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+background-size: cover;
+background-position: center;
+line-height: 1.8;
+
+}
+body,h1,h2,h3,h4,h5,h6 
+{font-family: "Raleway", sans-serif}
+
+
+.w3-bar-item w3-button
+{
+    font-weight: bold;
+
+}
+
+.w3-bar .w3-button 
+{
+  padding: 16px;
+
+font-weight: bold;
+font-size: 20px;
+
+
+}
+ 
+.logo-image
+{
+width: 60px;
+    
+height: 60px;
+    
+border-radius: 20%;
+    
+margin-top: -20px;
+    
+margin-left: -25px;
+
+}
+.l
+{
+    text-align: center;
+    color: black;
+    font-family: 'Nunito', Times, serif;
+    font-size: 30px;
+    padding: 5% 3% 5% 3%;
+}
+.k
+{
+  text-align: center;
+   color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    padding: 3% 0% 0% 0%;
+}
+
+
+</style>
+
+
+<body>
+
+
+<!-- Navbar (sit on top) -->
+
+<div class="w3-top">
+ 
+ <div class="w3-bar w3-white w3-card" id="myNavbar">
+    
+<a href="#home" class="w3-bar-item w3-button w3-wide">
+        
+<div class="logo-image">
+            
+<img src="Capture1.PNG" >
+      
+</div>
+    
+</a>
+    
+    
+<div class="w3-right w3-hide-small">
+      
+<a href="h1.html" class="w3-bar-item w3-button">HOME</a>
+      
+<a href="aboutus.html" class="w3-bar-item w3-button">ABOUT US</a>
+
+
+	
+
+
+<!--      
+<a href="#register" class="w3-bar-item w3-button">REGISTER</a>-->
+     
+<a href="contactus.html" class="w3-bar-item w3-button">CONTACT US</a>
+      
+<a href="Login.html" class="w3-bar-item w3-button">LOGIN</a>
+      
+<!--<a href="#contact" class="w3-bar-item w3-button">
+<i class="fa fa-envelope"></i> CONTACT</a>-->
+    </div>
+    </div>
+</div>
+<body>
+</html>

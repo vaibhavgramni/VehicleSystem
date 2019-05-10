@@ -1,0 +1,33 @@
+body
+{
+    background: url(yr.jpg) no-repeat;
+    background-size: cover;
+}
+table,th,td
+{
+    padding: 50px;
+    width: 85%;
+    height: 20%;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px  darkcyan;
+    
+    border-radius: 30px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 20px;
+    table-layout: fixed;
+    background:white;
+    
+    color:#000;
+    margin-top: 100px;
+}
+th,td
+{
+    padding: 20px;
+    opacity: 0.9;
+}
+h1
+{
+    color: darkcyan;
+}

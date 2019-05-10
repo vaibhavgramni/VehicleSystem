@@ -1,0 +1,136 @@
+
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="VehicleR.*"%>
+<%@page import="java.util.*"%>
+<%@page import="java.text.*"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" href="tablebranch.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Vehicle Type Search Details</title>
+</head>
+<body>
+<%
+Connection con=null;
+PreparedStatement pstmt=null;
+ResultSet rs=null;
+String vehicletype=(String)request.getParameter("vehicletype");
+String role = (String)session.getAttribute("role");
+%><br>
+	<br>
+	<br>	
+		<br>
+		<br>
+		<br>
+		<br>
+		<table align="center" cellpadding="5" cellspacing="5" border="1">
+			<tr>
+			
+			</tr>
+			<tr>
+				<th><b>Vehicle No</b></th>
+				<th><b>Branch</b></th>
+				<th><b>Vehicle Type</b></th>
+				<th><b>Insurance Date</b></th>
+				<th><b>Last Service Date</b></th>
+				<th><b>Service Due Date</b></th>
+				</tr>
+				<%
+				try {
+		               con=Util1.getConnection();
+		               System.out.println("before stmt");
+		               System.out.println(vehicletype);
+		               pstmt=con.prepareStatement("select * from vehicleinfo1 where vehicletype='"+vehicletype+"'");
+		               System.out.println("after stmt");
+		               rs=pstmt.executeQuery();
+		               System.out.println("Inside try search page");
+		               while(rs.next())
+		               {
+		            	   System.out.println("inside while next");
+		            	   String d = rs.getString("insurancedate");
+		            	    String servicedate = rs.getString("serviceduedate");
+		            	    SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+		           			Date date = format.parse(d);
+		           			Date dateservice = format.parse(servicedate);
+		           		 	System.out.println(date);
+		            	   Date datetoday = Calendar.getInstance().getTime();
+		         	       int diffInDays = (int) ((datetoday.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+		         	       int diffInDaysService = (int) ((datetoday.getTime() - dateservice.getTime()) / (1000 * 60 * 60 * 24)); 	
+		         	        System.out.println(diffInDays);
+		            	   if(role.equals("admin"))
+		            	   {
+		            		   %>
+		            		   	<tr>
+					<td><a href="Updateform2.jsp" id="vehicleno"><%=rs.getString("vehicleno") %></a></td>
+					<td><%=rs.getString("branch") %></td>
+					<td><%=rs.getString("vehicletype") %></td>
+					<%  if(diffInDays<=15)
+		         	        				{  %>
+		    									<td style="color:red;"><%=rs.getString("insurancedate") %></td>
+		    								<% }
+		    								else
+		    								{  %>
+		    									<td><%=rs.getString("insurancedate") %></td>
+		    							<% 	}  %>
+		    								<td><%=rs.getString("lastservicedate") %></td>
+		    								<%  if(diffInDaysService<=15)
+		         	        				{  %>
+		    									<td style="color:red;"><%=rs.getString("serviceduedate") %></td>
+		    								<% }
+		    								else
+		    								{  %>
+		    									<td><%=rs.getString("serviceduedate") %></td>
+		    							<% 	}  %>
+					
+				</tr>
+						<% 
+		            	   }
+		            	   else
+		            	   {
+		            		  %>
+		            		  <tr>
+					<td><%=rs.getString("vehicleno") %></td>
+					<td><%=rs.getString("branch") %></td>
+					<td><%=rs.getString("vehicletype") %></td>
+					<%  if(diffInDays<=15)
+		         	        				{  %>
+		    									<td style="color:red;"><%=rs.getString("insurancedate") %></td>
+		    								<% }
+		    								else
+		    								{  %>
+		    									<td><%=rs.getString("insurancedate") %></td>
+		    							<% 	}  %>
+		    								<td><%=rs.getString("lastservicedate") %></td>
+		    								<%  if(diffInDaysService<=15)
+		         	        				{  %>
+		    									<td style="color:red;"><%=rs.getString("serviceduedate") %></td>
+		    								<% }
+		    								else
+		    								{  %>
+		    									<td><%=rs.getString("serviceduedate") %></td>
+		    							<% 	}  %>
+					
+				</tr>
+				<%  
+		            	   }
+				
+				
+		               }
+		             } 
+		             catch (SQLException e) {       
+		                      e.printStackTrace();
+		               }
+		               finally {
+		                      Util1.closeAll(rs, pstmt, con);
+		               }
+				%>
+		</table>
+		<br>
+		<p style = "color:white"><center><h1>Fig: Search on the basis of date</h1></center></p>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+       
+<link rel="icon" href="Capture5.PNG" type="image/gif" sizes="70x70">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+		<meta charset="utf-8">
+        <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+        <script type="text/javascript" src="Userinfo1.js"></script>
+        <link rel='stylesheet' type="text/css" href="Register.css">
+		<link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+       
+<!-- Navbar (sit on top) -->
+
+<div class="w3-top">
+ 
+ <div class="w3-bar w3-white w3-card" id="myNavbar">
+    
+<a href="h1.html" class="w3-bar-item w3-button w3-wide">
+        
+<div class="logo-image">
+            
+<img src="Capture1.PNG" >
+      
+</div>
+    
+</a>
+    
+    
+<div class="w3-right w3-hide-small">
+      
+<a href="h1.html" class="w3-bar-item w3-button">HOME</a>
+      
+<a href="aboutus.html" class="w3-bar-item w3-button">ABOUT US</a>
+     
+<a href="contactus.html" class="w3-bar-item w3-button">CONTACT US</a>
+      
+<a href="Login.html" class="w3-bar-item w3-button">LOGIN</a>
+      
+<!--<a href="#contact" class="w3-bar-item w3-button">
+<i class="fa fa-envelope"></i> CONTACT</a>-->
+    </div>
+    </div>
+</div>
+        <br />    <br />    <br />    
+                <div class="registration">
+
+                    <form  align="left" action="Userinfo" onsubmit="return Validate()" method="Post">
+                    <br><h1 align="center">Register<br></h1><br><br />
+                    
+                    <span class="number">1</span> Username
+                    <input type="text" name="empid" id="empid" placeholder="Enter your username" onblur="empidonblur()" required> 
+                    <label id="lempid" style="color:grey; visibility:visible">Alphanumeric with max 6 characters</label>
+                    
+                    <br>
+
+                    <span class="number">2</span> First Name
+                    <input type="text" name="fname" id="fname" placeholder="Enter your first name" onblur="fnameonblur()" required>
+                    <label id="lfname" style="color:grey; visibility:visible">Alphabetic with max 50 characters</label>
+                    
+                    <br>
+                    
+                    <span class="number">3</span> Last Name
+                    <input type="text" name="lname" id="lname" placeholder="Enter your last name" onblur="lnameonblur()" required>
+                    <label id="llname" style="color:grey; visibility:visible">Alphabetic with max 50 characters</label>
+                    
+                    <br>
+
+                    <span class="number">4</span> Age
+                    <input type="text" name="age" id="age" placeholder="Enter your age" onblur="ageonblur()" required>
+                    <label id="lage" style="color:grey; visibility:visible">Numeric with max 2 characters</label>
+                    
+                    <br>
+                   
+                    <span class="number">5</span> Gender <br />
+                    <input type="radio" id="male" name="gender" value="male"><span id="ma" >
+
+                    &nbsp;Male</span>&nbsp;
+    
+                    <input type="radio" id="female" name="gender" value="female"><span id="Span1">
+    
+                    &nbsp;Female</span>
+                    
+                        <br>
+                        <br />
+
+                    <span class="number">6</span> Phone Number
+
+                    <select id="nu">
+
+                        <option>+ 91</option>
+
+                        <option>+ 92</option>
+
+                        <option>+ 93</option>
+
+                        <option>+ 94</option>
+
+                        <option>+ 95</option>
+
+                        <option>+ 96</option>
+
+                    </select>
+                    <input type="text" name="number" id="number" placeholder="Enter your phone number" onblur="numberonblur()" required>
+                    <label id="lnumber" style="color:grey; visibility:visible">Numeric with max 10 digits</label>
+                    
+                    <br>
+
+                    <span class="number">7</span> Email ID
+                    <input type="text" name="email" id="email" placeholder="Enter your email id" onblur="emailonblur()" required>
+                    <label id="lemail" style="color:grey; visibility:visible">Must contain @ and . character</label>
+                    
+                   <br>
+                   
+                   <span class="number">8</span> Password
+                   <input type="password" name="password" id="password1" placeholder="Enter your password" onblur="passwordonblur()" required>
+                   <label id="Label1" style="color:grey; visibility:visible">Alphanumeric with max 15 characters</label>
+                    
+                   <br>
+                   
+                   <span class="number">9</span> Branch
+                   <select id="userb" onchange="userbranch()">
+                    	<option value=""></option>
+                    	<option value="A11">A11</option>
+                    	<option value="A12">A12</option>
+                    	<option value="A13">A13</option>
+                    	<option value="A14">A14</option>
+                    	<option value="A15">A15</option>      	
+                    </select>
+                    <input type="hidden" name="branch" value="" id="branch">
+                   <br>
+                   <br>
+                        
+              
+                   <div class="wrapper">
+                   <button type="submit">Register</button> 
+                            <br />
+                    <a href="Login.html">Existing User? Login.</a>
+                            <br />
+                    </form>
+
+                </div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1>Login Page</h1>
+	<form action="LoginUser" method="Post">
+		<h2>Enter Emp Id : </h2><input type="text" name="empid"><br>
+		<h2>Enter Password : </h2><input type="password" name="password"><br>
+		<input type="submit" value="submit">
+	</form>
+	<a href="User.html">Create Account</a>
+</body>
+</html>

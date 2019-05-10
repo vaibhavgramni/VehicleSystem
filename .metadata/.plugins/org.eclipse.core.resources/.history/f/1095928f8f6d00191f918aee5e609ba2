@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+        <link rel="icon" href="Capture5.png" type="image/gif" sizes="70x70">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+		<meta charset="utf-8">
+        <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Register</title>
+        <script type="text/javascript" src="vehicleregis.js"></script>
+        <link rel='stylesheet' type="text/css" href="VehicleInfo.css">
+		<link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+               
+<!-- Navbar (sit on top) -->
+
+<div class="w3-top">
+ 
+ <div class="w3-bar w3-white w3-card" id="myNavbar">
+    
+<a href="#home" class="w3-bar-item w3-button w3-wide">
+        
+<div class="logo-image">
+            
+<img src="Capture1.png" >
+      
+</div>
+    
+</a>
+    
+    
+<div class="w3-right w3-hide-small">
+      
+<a href="h1.html" class="w3-bar-item w3-button">HOME</a>
+      
+<a href="aboutus.html" class="w3-bar-item w3-button">ABOUT US</a>
+     
+<a href="contactus.html" class="w3-bar-item w3-button">CONTACT US</a>
+      
+<a href="#contact us" class="w3-bar-item w3-button">LOGOUT</a>
+      
+<!--<a href="#contact" class="w3-bar-item w3-button">
+<i class="fa fa-envelope"></i> CONTACT</a>-->
+    </div>
+    </div>
+</div>
+	<br />
+                <div class="registration"><br>
+
+                    <form  align="left" action="Vehicleinfo" onsubmit="return Validate()" method="Post">
+                    <br><h1 align="center">New Vehicle Registration<br></h1><br>
+                    
+                    <span class="number">1</span> Vehicle Number
+                    <input type="text" name="vehicleno" id="vehicleno" placeholder="Enter Vehicle Number" onblur="vehiclenoonblur()" required> 
+                    <label id="lvehicleno" style="color:grey; visibility:visible">Alphanumeric with max 10 characters</label>
+                    
+                    <br>
+                    
+					<span class="number">2</span> Branch
+                    <select name="branch" id="userb" placeholder="Enter Branch" onchange="userbranch()" required>
+                        <option name="A11">A11</option>
+                        <option name="A11">A12</option>
+                        <option name="A11">A13</option>
+                        <option name="A11">A14</option>
+                        <option name="A11">A15</option>
+                    </select>
+                    <label id="lbranch" style="color:grey; visibility:visible">Select one option</label>
+                     <input type="hidden" name="branch" value="" id="branch">
+                    
+                    <br>
+                    
+                    <span class="number">3</span> Vehicle Type
+                    <select name ="vehicletype" id="userv" placeholder="Enter Vehicle Type" onchange="userVehicle()" required>
+                        <option name="two wheeler">two wheeler</option>
+                        <option name="four wheeler">four wheeler</option>
+                    </select>
+                    <label id="lvehicletype" style="color:grey; visibility:visible">Select one option</label>
+                    <input type="hidden" name="vehicletype" value="" id="vehicletype">
+                    
+                    <br>
+                    
+                    <span class="number">4</span> Insurance Expiry
+                    <input type="date" name="insuranceexpirydate" id="insuranceexpirydate" placeholder="MM-DD-YYYY" onblur="insuranceexpirydateonblur()" required>
+                    <label id="linsuranceexpirydate" style="color:grey; visibility:visible">Enter Insurance Expiry Date(MM-DD-YYYY)</label>
+                    
+                    <br>
+                    
+					<span class="number">5</span> Last Service
+                    <input type="date" name="lastservicedate" id="lastservicedate" placeholder="MM-DD-YYYY" onblur="lastservicedateonblur()" required>
+                    <label id="llastservicedate" style="color:grey; visibility:visible">Enter Last Serviced Date(MM-DD-YYYY)</label>
+                    
+                    <br>
+                    
+                    <span class="number">6</span> Service Due
+                    <input type="date" name="serviceduedate" id="serviceduedate" placeholder="MM-DD-YYYY" onblur="serviceduedateonblur()" required>
+                    <label id="lserviceduedate" style="color:grey; visibility:visible">Enter Service Due Date(MM-DD-YYYY)</label>
+                    
+                    <br>
+                    <br>
+                        <div class="wrapper">
+                    <button type="submit">Register</button> 
+                    </form>
+
+                </div>
+
+</body>
+</html>

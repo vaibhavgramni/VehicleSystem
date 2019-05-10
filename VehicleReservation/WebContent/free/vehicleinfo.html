@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Vehicle Register</title>
+        <script type="text/javascript" src="vehicleinfo11.js"></script>
+        <link rel='stylesheet' type="text/css" href="#">
+
+    </head>
+
+            <body>
+
+                <h1 align="center">Vehicle Registration<br></h1>
+
+                <div class="registration">
+
+                    <form align="center" action="Vehicleinfo" onsubmit="return Validate()">
+                        
+                    <input type="text" name="vehicleno" id="vehicleno" placeholder="Enter Vehicle No " onblur="vehiclenoonblur()" required> 
+                    <label id="lvehicleno" style="color:grey; visibility:visible">Alphanumeric with max 10 characters</label>
+                    <br>
+                    <br>
+
+                    <input type="text" name="branch" id="branch" placeholder="Enter Branch" onblur="branchonblur()" required>
+                    <label id="lbranch" style="color:grey; visibility:visible">Alphabetic with max 5 characters</label>
+                    
+                    <br>
+                    <br>
+                    <input type="text" name="vehicletype" id="vehicletype" placeholder="Enter Vehicle Type" onblur="vehicletypeonblur()" required>
+                    <label id="lvehicletype" style="color:grey; visibility:visible">Alphabetic with max 15 characters</label>
+                    
+                    <br>
+                    <br>
+                    <input type="date" name="insuranceexpirydate" id="insuranceexpirydate" placeholder="MM-DD-YYYY" onblur="insuranceexpirydateonblur()" required>
+                    <label id="linsuranceexpirydate" style="color:grey; visibility:visible">Enter Insurance Expiry Date(MM-DD-YYYY)</label>
+                    
+                    <br>
+                    <br>
+
+                    <input type="date" name="lastservicedate" id="lastservicedate" placeholder="MM-DD-YYYY" onblur="lastservicedateonblur()" required>
+                    <label id="llastservicedate" style="color:grey; visibility:visible">Enter Last Serviced Date(MM-DD-YYYY)</label>
+                    
+                   <br>
+                   <br>
+                   
+                   <input type="date" name="serviceduedate" id="serviceduedate" placeholder="MM-DD-YYYY" onblur="serviceduedateonblur()" required>
+                   <label id="lserviceduedate" style="color:grey; visibility:visible">Enter Service Due Date(MM-DD-YYYY)</label>
+                    
+                   <br>
+                   <br>
+                    <input type="submit" value="submit"> 
+                    </form>
+
+                </div>
+
+            </body>
+
+</html>

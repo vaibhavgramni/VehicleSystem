@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <link rel="icon" href="Capture5.PNG" type="image/gif" sizes="70x70">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+	<script src="update.js"></script>
+	<link rel='shortcut icon' type='image/x-icon' href='logoout.png' sizes="70x70"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='stylesheet' type="text/css" href="MainMenuAdmin.css">
+	<link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+	<title>Main Menu</title>
+	<%
+	String name=(String)session.getAttribute("name");
+	
+%>
+	<script type="text/javascript">
+		function checkVehicleNo()
+		{
+			var no=prompt("Please enter Vehicle No:", "Proper format");
+			document.getElementById("vehicleno").value=no;
+			return true;
+		}
+	</script>
+</head>
+<body>
+   
+<!-- Navbar (sit on top) -->
+
+<div class="w3-top">
+ 
+ <div class="w3-bar w3-white w3-card" id="myNavbar">
+    
+<a href="#home" class="w3-bar-item w3-button w3-wide">
+        
+<div class="logo-image">
+    <img src="Capture1.PNG" >       
+</div>
+    
+</a>
+    
+    
+<div class="w3-right w3-hide-small">
+      
+<a href="h1.html" class="w3-bar-item w3-button">HOME</a>
+      
+<a href="aboutus.html" class="w3-bar-item w3-button">ABOUT US</a>
+
+<!-- <a href="#register" class="w3-bar-item w3-button">REGISTER</a>-->
+     
+<a href="contactus.html" class="w3-bar-item w3-button">CONTACT US</a>
+      <form action="#">
+<input type="submit" href="#contact us" value="Logout"></input>
+      </form>
+<!--<a href="#contact" class="w3-bar-item w3-button">
+<i class="fa fa-envelope"></i> CONTACT</a>-->
+    </div>
+    </div>
+</div>
+    <br />
+    <br />    
+    
+ <h4 align="right">Hi <%=name%>, you are logged in. </h4>
+
+    <div class="main-page"><br />
+<h1 class="hh1">Vehicle Main Menu</h1>
+	<br />
+    <br />
+    <br />
+        <img src ="searchimg.jpg" alt="Search" />
+        <img src ="regimg.jpg" alt="Register" />
+        <img src ="updateimg.jpg" alt="Update" />
+    <br />
+    <br />
+    <br />
+	
+	<form action="SearchPage.jsp" class ="MyForm">
+		<button type="submit">Search Vehicle Details</button>
+	</form>
+
+    <form action="VehicleInfo.jsp" class ="MyForm">
+		<button type="submit">New Vehicle Registration</button>
+	</form>
+
+	<form class="MyForm" action="Updatevehicle" method="post" onclick="return checkVehicleNo()">
+		<input type="hidden" id="vehicleno" name="vehicleno" value="nothing">
+		<button type="submit">Update Vehicle Details</button>
+	</form>
+    <br />
+    <br />
+    <br />
+        </div>
+  
+	</body>
+</html>

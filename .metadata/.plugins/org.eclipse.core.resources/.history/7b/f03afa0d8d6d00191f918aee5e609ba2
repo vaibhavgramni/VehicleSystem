@@ -1,0 +1,57 @@
+var count=0;
+
+function vehiclenoonblur()
+{
+	alert('inside vehicleonblur');
+    var vehicleno=document.getElementById("vehicleno").value;
+    var regx=/^[0-9a-zA-Z]{1,9}$/;
+    var lvehicleno=document.getElementById("lvehicleno");
+    
+    if(regx.test(vehicleno))
+    {
+        document.getElementById('vehicleno').style.border = "";
+        document.getElementById('vehicleno').style.fontSize = "14px";
+        document.getElementById('vehicleno').style.color = "#000";
+
+        count += 1;
+    }
+    else 
+    {
+        document.getElementById('vehicleno').style.border = "2px solid red";
+    }
+}
+
+
+function passwordonblur() {
+	alert('inside passwordonblur');
+    var password = document.getElementById("password").value;
+    var lpassword = document.getElementById("lpassword");
+    var regx6 = /^[0-9a-zA-Z]{1,15}$/;
+    if (regx6.test(password)) {
+        document.getElementById('branch').style.border = "";
+        document.getElementById('branch').style.fontSize = "14px";
+        document.getElementById('branch').style.color = "#000";
+
+        count += 1;
+    }
+    else {
+        document.getElementById('branch').style.border = "";
+    }
+}
+
+
+function Validate()
+{
+	alert('count='+count);
+    if(count==2)
+    {
+    	alert('inside');
+        return true;
+    }
+    else{
+    	
+        alert("Please update the highlighted mandatory field(s).");
+        return false;
+    }
+}
+

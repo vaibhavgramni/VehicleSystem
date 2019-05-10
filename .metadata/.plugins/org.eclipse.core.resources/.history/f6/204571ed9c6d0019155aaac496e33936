@@ -1,0 +1,147 @@
+var count=0;
+
+function empidonblur()
+{
+    var name=document.getElementById("empid").value;
+    var regx=/^[0-9a-zA-Z]{1,6}$/;
+    var lemp_id=document.getElementById("lempid");
+    
+    if(regx.test(name))
+    {
+        count+=1;
+    }
+    else 
+    {
+        
+    }
+}
+
+function fnameonblur()
+{
+    var fname=document.getElementById("fname").value;
+    var lfname=document.getElementById("lfname");
+    var regx1=/^[a-zA-Z]{1,50}$/;
+        if(regx1.test(fname))
+        {
+            
+            count+=1;    
+        }
+        else
+        {
+            
+        }
+}
+
+function lnameonblur()
+{
+    var lname=document.getElementById("lname").value;
+    var llname=document.getElementById("llname");
+    var regx2=/^[a-zA-Z]{1,50}$/;
+        if(regx2.test(lname))
+        {
+           
+            count+=1;     
+        }
+        else
+        {
+           
+        }
+}
+
+function ageonblur()
+{
+    var age=document.getElementById("age").value;
+    var lage=document.getElementById("lage");
+    var regx3=/^[0-9]{2}$/;
+        if(regx3.test(age))
+        {
+            
+            count+=1;                 
+        }
+        else
+        {
+            
+        }
+}
+
+
+function numberonblur()
+{
+    var number=document.getElementById("number").value;
+    var lnumber=document.getElementById("lnumber");
+    var regx4 = /^[0-9]{10}$/;
+    //var regx=/abc/;
+        if(regx4.test(number))
+        {
+           
+            count+=1;                 
+        }
+        else
+        {
+           
+        }
+}
+
+function emailonblur()
+{
+    var email=document.getElementById("email").value;
+    var lemail=document.getElementById("lemail");
+    var regx5=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).([a-z]{2,20})$/ ;
+    if(regx5.test(email))
+    {
+       
+        count+=1;    
+    }
+    else
+    {
+        
+    }
+}
+
+function passwordonblur()
+{
+    var password=document.getElementById("password").value;
+    var lpassword=document.getElementById("lpassword");
+    var regx6=/^[0-9a-zA-Z]{1,15}$/;
+    if(regx6.test(password))
+    {
+        
+        count+=1;    
+    }
+    else
+    {
+       
+    }
+}
+
+
+
+function userbranch()
+{
+		
+	 var selectBox = document.getElementById("userb");
+	    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+	    document.getElementById("branch").value=selectedValue;
+	    count+=1;	
+}
+
+
+
+function Validate()
+{
+    
+    var male=document.getElementById("male");
+    var female=document.getElementById("female");
+        if(male.checked==true || female.checked==true)
+        {
+            count+=1;         
+        }
+    if(count==9)
+    {
+        alert("Data submitted successfully.");
+        return true;
+    }
+    else {
+        return false;
+    }
+}
